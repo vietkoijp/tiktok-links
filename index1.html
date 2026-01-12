@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang Link TikTok Lite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 40px 15px;
+    }
+    .container {
+      max-width: 420px;
+      margin: auto;
+    }
+    h1 {
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+    .section {
+      margin-top: 25px;
+    }
+    .main-btn {
+      background: white;
+      color: black;
+      padding: 15px;
+      border-radius: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .links {
+      margin-top: 15px;
+      display: none;
+    }
+    .link-item {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .link-item a {
+      flex: 1;
+      background: #1c1c1c;
+      color: white;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 14px;
+      font-weight: 600;
+      border: 1px solid #2a2a2a;
+    }
+    .copy-btn {
+      background: #ff0050;
+      border: none;
+      color: white;
+      padding: 0 14px;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .copy-btn.copied {
+      background: #2ecc71;
+    }
+    .single-link {
+      display: block;
+      background: #ff0050;
+      color: white;
+      padding: 16px;
+      border-radius: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 35px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🔗 TikTok Lite Links</h1>
+
+  <!-- MỤC 1 -->
+  <div class="section">
+    <div class="main-btn" onclick="toggleLinks()">
+      ▶ Video 60 phút
+    </div>
+
+    <div class="links" id="videoLinks">
+
+      <div class="link-item">
+        <a href="https://lite.tiktok.com/t/ZS6sesB1u/" target="_blank">
+          ▶ Video 1 (60 phút)
+        </a>
+        <button class="copy-btn"
+          onclick="copyLink(this,'https://lite.tiktok.com/t/ZS6sesB1u/')">
+          Sao chép
+        </button>
+      </div>
+
+      <div class="link-item">
+        <a href="https://lite.tiktok.com/t/ZS6seqdrb/" target="_blank">
+          ▶ Video 2 (60 phút)
+        </a>
+        <button class="copy-btn"
+          onclick="copyLink(this,'https://lite.tiktok.com/t/ZS6seqdrb/')">
+          Sao chép
+        </button>
+      </div>
+
+      <div class="link-item">
+        <a href="https://lite.tiktok.com/t/ZS6sYvHJb/" target="_blank">
+          ▶ Video 3 (60 phút)
+        </a>
+        <button class="copy-btn"
+          onclick="copyLink(this,'https://lite.tiktok.com/t/ZS6sYvHJb/')">
+          Sao chép
+        </button>
+      </div>
+
+      <div class="link-item">
+        <a href="https://lite.tiktok.com/t/ZSMkQRDak/" target="_blank">
+          ▶ Video 4 (60 phút)
+        </a>
+        <button class="copy-btn"
+          onclick="copyLink(this,'https://lite.tiktok.com/t/ZSMkQRDak/')">
+          Sao chép
+        </button>
+      </div>
+
+      <div class="link-item">
+        <a href="https://lite.tiktok.com/t/ZSMXxNXqn/" target="_blank">
+          ▶ Video 5 (60 phút)
+        </a>
+        <button class="copy-btn"
+          onclick="copyLink(this,'https://lite.tiktok.com/t/ZSMXxNXqn/')">
+          Sao chép
+        </button>
+      </div>
+
+      <div class="link-item">
+        <a href="https://lite.tiktok.com/t/ZSMXxLU8L/" target="_blank">
+          ▶ Video 6 (60 phút)
+        </a>
+        <button class="copy-btn"
+          onclick="copyLink(this,'https://lite.tiktok.com/t/ZSMXxLU8L/')">
+          Sao chép
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MỤC 2 -->
+  <a class="single-link"
+     href="https://lite.tiktok.com/t/ZSHKT71jcJ1Q4-9IEy8/"
+     target="_blank">
+    🎉 Sự kiện TikTok Lite
+  </a>
+
+</div>
+
+<script>
+  function toggleLinks() {
+    const links = document.getElementById("videoLinks");
+    links.style.display = links.style.display === "block" ? "none" : "block";
+  }
+
+  function copyLink(button, text) {
+    navigator.clipboard.writeText(text);
+
+    button.textContent = "Đã copy ✔";
+    button.classList.add("copied");
+
+    setTimeout(() => {
+      button.textContent = "Sao chép";
+      button.classList.remove("copied");
+    }, 2000);
+  }
+</script>
+
+</body>
+</html>
